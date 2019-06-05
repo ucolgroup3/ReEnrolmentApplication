@@ -1,0 +1,148 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReErolmentApplicaton">
+     <!--This is the Data dictionary for The flyouts for PreviouslypassedYear2 on the Selecting a major page.
+    The idea of using a flyout was to hid all the information on the page but still being able to access it if you wanted.-->
+    <Flyout x:Key="SecurityMajor" x:Name="SecurityMajor" >
+            <!-- It uses a stack panel to order them and stay symetrical-->
+        <StackPanel Background="Red" BorderBrush="Black">
+            <!--Prequistes and Major electives Text boxes have a white background so they are distinctive
+            from the Major Colour Background eg. red For newtorking Majors.All text boxes are read only so the user can not change them-->
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T101 - Networking Funtalmentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+        </StackPanel>
+    </Flyout>
+    <!--This code repets for the rest of the majors.
+    Look at one youve looked at them all-->
+    <Flyout x:Key="NetworkMajor" x:Name="NetworkMajor">
+        <StackPanel Background="Red">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T101 - Networking Funtalmentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="SystemsMajor" x:Name="SystemsMajor">
+        <StackPanel Background="red">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T111 - Computer Fundamentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="BusinessMajor" x:Name="BusinessMajor">
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T121 - Networking Funtalmentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D201 - Advanced Programming" />
+            <TextBox IsReadOnly="true" Text="D202 - Software Process And Planning" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="DataMajor" x:Name="DataMajor">
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="D111 - Database Funtalmentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D201 - Advanced Programming" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+            <TextBox IsReadOnly="true" Text="I212 - Enterprise Data Management" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="ProjectMajor" x:Name="ProjectMajor">
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="I102 - Technical Support Fundamentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D202 - Software Process And Planning" />
+            <TextBox IsReadOnly="true" Text="I212 - Enterprise Data Management" />
+            <TextBox
+                Background="Orange"
+                IsReadOnly="true"
+                Text="I263 - Introduction to Finance" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="WebMajor" x:Name="WebMajor">
+        <StackPanel Background="Blue">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="I111 - Web Fundamentals " />
+            <TextBox IsReadOnly="true" Text="D101 - Programming Fundamentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D211 - Systems Security" />
+            <TextBox IsReadOnly="true" Text="I203 - Digital Multimedia" />
+            <TextBox IsReadOnly="true" Text="I213 - Dynamic Web Solutions" />
+
+
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="SoftwareMajor" x:Name="SoftwareMajor">
+        <StackPanel Background="Blue">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="D101 - Programming Fundamentals " />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D201 - Advanced Programming" />
+            <TextBox IsReadOnly="true" Text="D202 - Software Process And Planning" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+        </StackPanel>
+    </Flyout>
+
+
+</ResourceDictionary>

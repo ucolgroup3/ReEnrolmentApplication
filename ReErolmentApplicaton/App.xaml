@@ -1,0 +1,34 @@
+﻿<Application
+    x:Class="ReErolmentApplicaton.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReErolmentApplicaton"
+    RequestedTheme="Light">
+
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Below is to pop up styles for the resource dictionary to use.-->
+            <Style x:Key="ErrorStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="DarkRed" />
+                <Setter Property="FontFamily" Value="Segoe UI Semilight" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+            <Style x:Key="StatusStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="FontFamily" Value="Segoe UI Semilight" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+            <!--Added the resource dictionary to the pages so they are able to be used.-->
+            <ResourceDictionary.MergedDictionaries>
+                <!--
+                    Styles that define common aspects of the platform look and feel
+                -->
+                <ResourceDictionary Source="ResourceDict.xaml" />
+                <ResourceDictionary Source="ResourceDict2.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+
+</Application>

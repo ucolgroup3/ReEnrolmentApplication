@@ -1,0 +1,151 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReErolmentApplicaton">
+    <!--This is the Data dictionary for The flyouts for PreviouslypassedYear3 on the Selecting a major page.
+    The idea of using a flyout was to hid all the information on the page but still being able to access it if you wanted.-->
+    <Flyout x:Key="SecurityMajor2" x:Name="SecurityMajor2">
+        <!--Prequistes and Major electives Text boxes have a white background so they are distinctive
+            from the Major Colour Background eg. red For newtorking Majors.All text boxes are read only so the user can not change them-->
+        <StackPanel Background="Red">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T311 - Systems Administration" />
+            <TextBox IsReadOnly="true" Text="T312 - Network Security CCNA Security" />
+        </StackPanel>
+    </Flyout>
+    <!--This code repets for the rest of the majors.
+    Look at one youve looked at them all-->
+    <Flyout x:Key="NetworkMajor2" x:Name="NetworkMajor2">
+        <StackPanel Background="Red">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T301 - Network Design" />
+            <TextBox IsReadOnly="true" Text="T302 - Networks CISCO Scaling And Connecting" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="SystemsMajor2" x:Name="SystemsMajor2">
+        <StackPanel Background="Red">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="T311 - System Administration" />
+            <TextBox IsReadOnly="true" Text="D311 - Advanced Database Concepts" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="BusinessMajor2" x:Name="BusinessMajor2">
+
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="I303 - Managerial Practise" />
+            <TextBox IsReadOnly="true" Text="I321 - Advanced Systems Analysis" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="DataMajor2" x:Name="DataMajor2">
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Securtiy" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D311 - Advanced Database Concepts" />
+            <TextBox IsReadOnly="true" Text="I304 - Data Analytics And Intelligence" />
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="ProjectMajor2" x:Name="ProjectMajor2">
+        <StackPanel Background="Green">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+            <TextBox IsReadOnly="true" Text="T211 - Systems Securtiy" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="I367 (PM700) - Advanced Project Management" Background="Orange" />
+            <TextBox IsReadOnly="true" Text="I303 - Managerial Practise" />
+            
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="WebMajor2" x:Name="WebMajor2">
+        <StackPanel Background="Blue">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="D211 - Systems Securtiy" />
+            <TextBox IsReadOnly="true" Text="I203 - Digital Multimedia" />
+            <TextBox IsReadOnly="true" Text="I213 - Dynamic Web Solutions" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="I311 - Software Engineering" />
+            <TextBox IsReadOnly="true" Text="D303 - Java Mobile And Web" />
+
+        </StackPanel>
+    </Flyout>
+    <Flyout x:Key="SoftwareMajor2" x:Name="SoftwareMajor2">
+        <StackPanel Background="Blue">
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Prequsites" />
+            <TextBox IsReadOnly="true" Text="D201 - Advanced Programming" />
+            <TextBox IsReadOnly="true" Text="D202 - Software Process And Planning" />
+            <TextBox IsReadOnly="true" Text="D211 - Database Development" />
+            <TextBox
+                Background="White"
+                IsReadOnly="true"
+                Text="Major Electives" />
+            <TextBox IsReadOnly="true" Text="D301 - Software Engineering" />
+            <TextBox IsReadOnly="true" Text="D303 - Java Mobile And Web" />
+            <TextBox IsReadOnly="true" Text="I301 - Software Engineering" />
+        </StackPanel>
+    </Flyout>
+</ResourceDictionary>

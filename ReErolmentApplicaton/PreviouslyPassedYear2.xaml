@@ -1,0 +1,157 @@
+﻿<Page
+    
+    x:Class="ReErolmentApplicaton.PreviouslyPassedYear2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReErolmentApplicaton"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+>
+
+
+    <Grid>
+        <Pivot x:Name="rootPivot" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
+            <Pivot.TitleTemplate>
+                <!--This is the Banner-->
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch" Height="108" VerticalAlignment="Stretch" Width="493">
+                        <Image HorizontalAlignment="Left" Height="114" Margin="10,0,0,0" VerticalAlignment="Top" Width="193" Source="/Assets/images.png"/>
+                        <TextBlock Text="                  Re-Enrolment" Style="{ThemeResource HeaderTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.TitleTemplate>
+
+            <PivotItem x:Name="Student" Header="Student" Margin="0">
+                <!--Students Form-->
+                <Grid Background="White">
+                    <RelativePanel>
+                        <!--  Students Informations  -->
+                        <!--  This information needs to go into the database  -->
+                        <StackPanel x:Name="Customer" Margin="20">
+                            <!-- In this stack panel is all the information for the database that the Student must enter.
+                                The first being ID, the First and surname and last Email -->
+                            <TextBox x:Name="TxtID" Header= "Student ID:" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" />
+                            <TextBox x:Name="TxtFirstName" Header= "First Name" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+
+                            <TextBox x:Name="TxtSurname" Header="Surname" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  />
+                            <TextBox x:Name="TxtEmail" Header= "Email" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                        </StackPanel>
+                        <StackPanel x:Name="Associate" Margin="60,40,28,60" RelativePanel.RightOf="Customer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <!--  Intake selection for the year  -->
+                            <!--  Must be selected and put into the database.  -->
+                            <TextBox Text="Select A Intake" FontSize="24" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True"/>
+                            <RadioButton x:Name="FebIntake" GroupName="Group1" Content="February Intake" HorizontalAlignment="Center" Height="52" VerticalAlignment="Center" Width="208" FontSize="20" Checked="RadioButton_Checked"/>
+                            <RadioButton x:Name="JulyIntake" GroupName="Group1" Content="July Intake" HorizontalAlignment="Center" Height="52" VerticalAlignment="Center" Width="208" FontSize="20" Margin="0,0,0,0"/>
+                        </StackPanel>
+                        <!--  This button moves between Pivots and allows the user to move towards the next step in the Enrolment  -->
+                        <Button x:Name="BtnNextPreviouslyPassedPapers" Content="Next" HorizontalAlignment="Left" Height="46" Margin="1077,445,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnNextPreviouslyPassedPapers_Click" Foreground="White"/>
+                        <!--  This is the cancel button and invokes its click method with returns you back to the main page. And will refresh the database and empty your information you added.  -->
+                        <Button x:Name="BtnCancel" Content="Cancel" HorizontalAlignment="Left" Height="46" Margin="864,445,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnCancel_Click" Foreground="White"/>
+
+                    </RelativePanel>
+                </Grid>
+            </PivotItem>
+            <!--  Previously passed papers Page (Next Pivot)  -->
+            <!--  This page has 12 different checkboxes and each one in unchecked except the Compulsory Papers.  -->
+            <PivotItem x:Name="PrevouslyPassedPapers" Header="Previously Passed Papers" Margin="-4,0,4,0">
+                <Grid Background="White" HorizontalAlignment="Stretch" Margin="7,0,-7,0" VerticalAlignment="Stretch" AllowDrop="True"  BorderBrush="Black">
+                    <!--Checkboxs one per paper and records into the database-->
+                    <TextBox x:Name="TxtSemsterOne" Text="Semster One" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="133,38,895,431"/>
+                    <TextBox x:Name="TxtSemsterTwo" Text="Semster Two" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="875,38,158,431"/>
+                    <!--  Checkboxs one per paper and records into the database  -->
+                    <!--  Below are all 8 other check boxes that are all the same excep the names of the box and the Text inside them.  -->
+                    <!--  1  -->
+                    <CheckBox x:Name="ChkD101" Checked="BtnCancel_Click" Unchecked="D101UnCheck" Content="D101 Programming Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="778,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20" BorderThickness="4,4,4,4" />
+                    <!--  2  -->
+                    <CheckBox x:Name="ChkD111" Checked="D111Check" Unchecked="D111UnCheck" Content="D111 Data Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="56,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
+                    <!--  3  -->
+                    <CheckBox x:Name="ChkI101" Checked="I101Check" Unchecked="I101UnCheck" Content="I101 Information Systems Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="56,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <!--  4  -->
+                    <CheckBox x:Name="ChkI111" Checked="I111Check" Unchecked="I111UnCheck" Content="I111 Web Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="1018,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <!--  5  -->
+                    <CheckBox x:Name="ChkI121" Checked="I121Check" Unchecked="I121UnCheck" Content="I121 Systems Analysis Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="277,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <!--  6  -->
+                    <CheckBox x:Name="ChkI102" Checked="I102Check" Unchecked="I102UnCheck" Content="I102 Technical Support Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="778,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <!--  7  -->
+                    <CheckBox x:Name="ChkT101" Checked="T101Check" Unchecked="T101UnCheck" Content="T101 Network Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="1018,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <!--  8  -->
+                    <CheckBox x:Name="ChkT111" Checked="T111Check" Unchecked="T111UnCheck" Content="T111 Computer Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="277,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
+                    
+                    <!--Select all of check boxes above-->
+                    <Button x:Name="BtnSelect" Content="Select All" HorizontalAlignment="Center" Height="120" Margin="425,31,453,0" VerticalAlignment="Top" Width="402" Click="BtnSelect_UnClick" Background="Blue" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="White" FontSize="35"/>
+                    <!--Will unselect all Checkboxes above.-->
+                    <HyperlinkButton Content="Un-Select" HorizontalAlignment="Center" Height="54" Margin="559,145,587,0" VerticalAlignment="Top" Width="134" FontSize="20" Click="HyperlinkButton_Click"/>
+                    <Button x:Name="BtnNextMajor" Content="Next" HorizontalAlignment="Left" Height="46" Margin="1079,447,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnNextMajor_Click" Foreground="White"/>
+                </Grid>
+            </PivotItem>
+            <!--This is selection for Majors page-->
+            <PivotItem x:Name="Major" Header="Select a Major" Margin="0">
+                <Grid  Background="White">
+                    <!--  This is the Network major section everything inside the Red Border is below  -->
+                    <!--  The Next two major types will be similar code so you really only need on of the sections  -->
+                    <Border BorderBrush="Red" HorizontalAlignment="Center" Height="390" VerticalAlignment="Center" Width="214" BorderThickness="4,4,4,4" Margin="47,27,1019,120"/>
+                    <!--  Simple Radio button that all have the same group so only one can be selected at a time  -->
+                    <TextBox x:Name="TxtNetwork" Text="Network Majors" FontSize="25" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="47,29,1019,462"/>
+                    <!--  Each Section has a title  -->
+                    <RadioButton Content="Security Major" GroupName="Group2" HorizontalAlignment="Left" Height="27" Margin="69,195,0,0" VerticalAlignment="Top" Width="142"/>
+                    <!--  This button for more information controls the flyout code that once clicked will so all the prequisties and Major electives for each paper.  -->
+                    <Button x:Name="BtnInNetworkEng" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="110,147,0,0" VerticalAlignment="Top" Flyout="{StaticResource NetworkMajor}" Foreground="Red"/>
+                    <!--  Simple Radio button that all have the same group so only one can be selected at a time  -->
+                    <RadioButton Content="Systems Administration Major" GroupName="Group2" HorizontalAlignment="Left" Height="53" Margin="69,310,0,0" VerticalAlignment="Top" Width="171"/>
+                    <!--  This button for more information controls the flyout code that once clicked will so all the prequisties and Major electives for each paper.  -->
+                    <Button x:Name="BtnSecurity" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="110,269,0,0" VerticalAlignment="Top" Flyout="{StaticResource SecurityMajor}" Foreground="Red"/>
+                    <!--  Simple Radio button that all have the same group so only one can be selected at a time  -->
+                    <RadioButton Content="Network Engineering Major" GroupName="Group2" HorizontalAlignment="Left" Height="45" Margin="69,80,0,0" VerticalAlignment="Top" Width="171"/>
+                    <!--  This button for more information controls the flyout code that once clicked will so all the prequisties and Major electives for each paper.  -->
+                    <Button x:Name="BtnSystems" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="110,368,0,0" VerticalAlignment="Top" Flyout="{StaticResource SystemsMajor}" Foreground="Red"/>
+                    <!--Software Major-->
+                    <Border BorderBrush="Blue" HorizontalAlignment="Left" Height="390" VerticalAlignment="Top" Width="214" BorderThickness="4,4,4,4" Margin="713,27,0,0"/>
+                    <TextBox x:Name="TxtSoftware" Text="Software Majors" FontSize="25" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="721,29,345,464"/>
+                    <Button x:Name="BtnSoftware" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="769,147,0,0" VerticalAlignment="Top" Flyout="{StaticResource SoftwareMajor}" Foreground="Blue"/>
+                    <RadioButton Content="Software Engineering" GroupName="Group2" HorizontalAlignment="Left" Height="62" Margin="757,80,0,0" VerticalAlignment="Top" Width="122"/>
+                    <Button x:Name="BtnWeb" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="769,269,0,0" VerticalAlignment="Top" Flyout="{StaticResource WebMajor}" Foreground="Blue"/>
+                    <RadioButton Content="Web And Mobile Development Major" GroupName="Group2" HorizontalAlignment="Left" Height="74" Margin="757,195,0,0" VerticalAlignment="Top" Width="142"/>
+                    <!--Information Majors-->
+                    <Border BorderBrush="Green" HorizontalAlignment="Center" Height="390" VerticalAlignment="Center" Width="281" BorderThickness="4,4,4,4" Margin="344,27,655,120"/>
+                    <TextBox x:Name="TxtInformation" Text="Information Majors" FontSize="25" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="371,27,655,464"/>
+                    <Button x:Name="BtnBusiness" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="450,269,0,0" VerticalAlignment="Top" Flyout="{StaticResource BusinessMajor}" Foreground="Green" />
+                    <RadioButton Content="Business And Systems Analysis Major" GroupName="Group2" HorizontalAlignment="Left" Height="69" Margin="416,195,0,0" VerticalAlignment="Top" Width="142"/>
+                    <Button x:Name="BtnData" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="450,147,0,0" VerticalAlignment="Top" Flyout="{StaticResource DataMajor}" Foreground="Green"/>
+                    <RadioButton Content="Data Management And Analytics Major" GroupName="Group2" HorizontalAlignment="Left" Height="62" Margin="416,80,0,0" VerticalAlignment="Top" Width="142"/>
+                    <Button x:Name="BtnProject" Content="More Information" Background="White" HorizontalAlignment="Left" Margin="450,368,0,0" VerticalAlignment="Top" Flyout="{StaticResource ProjectMajor}" Foreground="Green"/>
+                    <RadioButton Content="Project Management Major" GroupName="Group2" HorizontalAlignment="Left" Height="56" Margin="416,310,0,0" VerticalAlignment="Top" Width="164"/>
+
+                    <!--Double Major
+                    Selections should only be able to Select a different major to one already selected.-->
+                    <Button x:Name="BtnDoubleMajor" Content="Select Double Major" HorizontalAlignment="Left" Height="46" Margin="869,445,0,0" VerticalAlignment="Top" Width="174" Background="Blue" BorderBrush="Black" Click="BtnNextEnrolment_Click" Foreground="White"/>
+                    <!--  This combo box is used to select the second major in you double major.  -->
+                    <ComboBox x:Name="CmboDoubleMajor" Height="56" Width="292" Margin="956,338,0,0" PlaceholderText="Double Major Selection" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <ComboBoxItem Content="Business And Systems Analysis "/>
+                        <ComboBoxItem Content="Data Management And Analytics"/>
+                        <ComboBoxItem Content="Network Engineering"/>
+                        <ComboBoxItem Content="Project Management"/>
+                        <ComboBoxItem Content="Security"/>
+                        <ComboBoxItem Content="Software Engineering"/>
+                        <ComboBoxItem Content="Systems Administration"/>
+                        <ComboBoxItem Content="Web And Mobile Development"/>
+                    </ComboBox>
+                    <!--No Major Selected and needs to have no enrolment pages added.
+                    Also moves you straight to enrolment page-->
+                    <!--  Unendorsed Majors has to be an option to due to some of the older people still in certain degrees.  -->
+                    <Button x:Name="BtnUnendorsed" Content="Select Unendorsed" HorizontalAlignment="Left" Height="46" Margin="674,445,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnUnendorsed_Click" Foreground="White"/>
+                    <!--  This is the Next button to move onto the next pivot Page (Enrolments)  -->
+                    <Button x:Name="BtnNextEnrolment" Content="Next" HorizontalAlignment="Left" Height="46" Margin="1077,445,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnNextEnrolment_Click" Foreground="White"/>
+                </Grid>
+            </PivotItem>
+            <!--Enrolments Pivot Page-->
+            <PivotItem x:Name="EnrolmentPivot" Header="Enrolment" Margin="0">
+                <Grid  Background="White">
+                    <Button x:Name="BtnSave" Content="Save" HorizontalAlignment="Left" Height="46" Margin="1077,445,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" Background="Blue" BorderBrush="Black" Foreground="White" Click="BtnSave_Click"/>
+                </Grid>
+
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>
