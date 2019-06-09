@@ -11,7 +11,7 @@
 
 
     <Grid>
-        <Pivot x:Name="rootPivot" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
+        <Pivot x:Name="rootPivot" Background="{ThemeResource SystemControlBackgroundAccentBrush}" >
             <Pivot.TitleTemplate>
                 <!--This is the Banner-->
                 <DataTemplate>
@@ -57,26 +57,26 @@
             <PivotItem x:Name="PrevouslyPassedPapers" Header="Previously Passed Papers" Margin="-4,0,4,0">
                 <Grid Background="White" HorizontalAlignment="Stretch" Margin="7,0,-7,0" VerticalAlignment="Stretch" AllowDrop="True"  BorderBrush="Black">
                     <!--Checkboxs one per paper and records into the database-->
-                    <TextBox x:Name="TxtSemsterOne" Text="Semster One" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="133,38,895,431"/>
-                    <TextBox x:Name="TxtSemsterTwo" Text="Semster Two" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="875,38,158,431"/>
+                    <TextBox x:Name="TxtSemsterOne" Text="Semester One" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="133,38,895,431"/>
+                    <TextBox x:Name="TxtSemsterTwo" Text="Semester Two" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="875,38,158,431"/>
                     <!--  Checkboxs one per paper and records into the database  -->
                     <!--  Below are all 8 other check boxes that are all the same excep the names of the box and the Text inside them.  -->
                     <!--  1  -->
-                    <CheckBox x:Name="ChkD101" Checked="BtnCancel_Click" Unchecked="D101UnCheck" Content="D101 Programming Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="778,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20" BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkD101" Checked="D101Check" Unchecked="D101UnCheck" Content="D101 Programming Fundamentals" HorizontalAlignment="Left" Height="131" Margin="778,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20" BorderThickness="4,4,4,4" />
                     <!--  2  -->
-                    <CheckBox x:Name="ChkD111" Checked="D111Check" Unchecked="D111UnCheck" Content="D111 Data Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="56,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
+                    <CheckBox x:Name="ChkD111" Checked="D111Check" Unchecked="D111UnCheck" Content="D111 Data Fundamentals" HorizontalAlignment="Left" Height="131" Margin="56,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
                     <!--  3  -->
-                    <CheckBox x:Name="ChkI101" Checked="I101Check" Unchecked="I101UnCheck" Content="I101 Information Systems Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="56,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkI101" Checked="I101Check" Unchecked="I101UnCheck" Content="I101 Information Systems Fundamentals" HorizontalAlignment="Left" Height="131" Margin="56,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
                     <!--  4  -->
-                    <CheckBox x:Name="ChkI111" Checked="I111Check" Unchecked="I111UnCheck" Content="I111 Web Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="1018,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkI111" Checked="I111Check" Unchecked="I111UnCheck" Content="I111 Web Fundamentals" HorizontalAlignment="Left" Height="131" Margin="1018,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
                     <!--  5  -->
-                    <CheckBox x:Name="ChkI121" Checked="I121Check" Unchecked="I121UnCheck" Content="I121 Systems Analysis Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="277,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkI121" Checked="I121Check" Unchecked="I121UnCheck" Content="I121 Systems Analysis Fundamentals" HorizontalAlignment="Left" Height="131" Margin="277,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
                     <!--  6  -->
-                    <CheckBox x:Name="ChkI102" Checked="I102Check" Unchecked="I102UnCheck" Content="I102 Technical Support Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="778,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkI102" Checked="I102Check" Unchecked="I102UnCheck" Content="I102 Technical Support Fundamentals" HorizontalAlignment="Left" Height="131" Margin="778,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
                     <!--  7  -->
-                    <CheckBox x:Name="ChkT101" Checked="T101Check" Unchecked="T101UnCheck" Content="T101 Network Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="1018,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
+                    <CheckBox x:Name="ChkT101" Checked="T101Check" Unchecked="T101UnCheck" Content="T101 Network Fundamentals" HorizontalAlignment="Left" Height="131" Margin="1018,332,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4" />
                     <!--  8  -->
-                    <CheckBox x:Name="ChkT111" Checked="T111Check" Unchecked="T111UnCheck" Content="T111 Computer Fundatmentals" HorizontalAlignment="Left" Height="131" Margin="277,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
+                    <CheckBox x:Name="ChkT111" Checked="T111Check" Unchecked="T111UnCheck" Content="T111 Computer Fundamentals" HorizontalAlignment="Left" Height="131" Margin="277,196,0,0" VerticalAlignment="Top" Width="192" FontSize="20"  BorderThickness="4,4,4,4"  />
                     
                     <!--Select all of check boxes above-->
                     <Button x:Name="BtnSelect" Content="Select All" HorizontalAlignment="Center" Height="120" Margin="425,31,453,0" VerticalAlignment="Top" Width="402" Click="BtnSelect_UnClick" Background="Blue" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="White" FontSize="35"/>

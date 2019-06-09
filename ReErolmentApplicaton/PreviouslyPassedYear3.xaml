@@ -8,7 +8,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
     <Grid>
-        <Pivot x:Name="rootPivot" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}">
+        <Pivot x:Name="rootPivot" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
             <Pivot.TitleTemplate>
                 <!--  This is the Banner  -->
                 <DataTemplate>
@@ -154,7 +154,7 @@
                         FontStyle="Italic"
                         FontWeight="SemiBold"
                         IsReadOnly="True"
-                        Text="Semster One" />
+                        Text="Semester One" />
                     <TextBox
                         x:Name="TxtSemsterTwo"
                         Margin="875,38,158,431"
@@ -164,7 +164,7 @@
                         FontStyle="Italic"
                         FontWeight="SemiBold"
                         IsReadOnly="True"
-                        Text="Semster Two" />
+                        Text="Semester Two" />
                     <!--  Checkboxs one per paper and records into the database  -->
                     <!--  I202 is on a isChecked from the start being a compulsory paper  -->
                     <CheckBox
@@ -640,7 +640,7 @@
                         Margin="27,445,793,46"
                         BorderThickness="0,0,0,0"
                         IsReadOnly="True"
-                        Text="* each Major has two Compulsory papers of Profesional Practise (I301) "
+                        Text="* each Major has two Compulsory papers of Professional Practice (I301) "
                         TextAlignment="DetectFromContent" />
                     <TextBox
                         x:Name="TxtPreq2"
@@ -649,7 +649,7 @@
                         VerticalAlignment="Stretch"
                         BorderThickness="0,0,0,0"
                         IsReadOnly="True"
-                        Text="and the Industry Project (I302) which will be based on you major."
+                        Text="and the Industry Project (I302) which will be based on your major."
                         TextAlignment="DetectFromContent" />
 
 
