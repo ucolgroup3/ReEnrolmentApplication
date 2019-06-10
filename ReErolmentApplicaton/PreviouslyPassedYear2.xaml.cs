@@ -330,8 +330,6 @@ namespace ReErolmentApplicaton
             //Displays The Dialog box above
             ContentDialogResult result = await NoSelectedRadioDialog.ShowAsync();
         }
-
-
     }
 }
 
