@@ -655,6 +655,50 @@
 
                 </Grid>
             </PivotItem>
+
+            <!--  Select Electives Page (Next Pivot)  -->
+
+            <PivotItem x:Name="SelectElectives" Header="Select Electives" Margin="-4,0,4,0">
+                <Grid Background="White" HorizontalAlignment="Stretch" Margin="7,0,-7,0" VerticalAlignment="Stretch" AllowDrop="True"  BorderBrush="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="317"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Displays which semseter as a header for the electives -->
+
+                    <TextBox x:Name="TxtSemster_One" Text="Semester One" TextAlignment="Center" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="133,38,895,209"/>
+                    <TextBox x:Name="TxtSemster_Two" Text="Semester Two" TextAlignment="Center" FontSize="40" FontStyle="Italic" FontFamily="Arial Narrow" FontWeight="SemiBold" BorderThickness="0,0,0,0" IsReadOnly="True" Margin="900,38,133,209"/>
+
+                    <!--Will send you back to select different major.-->
+
+                    <HyperlinkButton Content="Select alternative major" HorizontalAlignment="Stretch" Height="54" Margin="645,10,646,0" VerticalAlignment="Top" FontSize="20" Click="BtnReMajor_Click"/>
+
+                    <!-- Displays information on how to use this page -->
+
+                    <TextBlock Height="36" Margin="543,113,544,0" TextWrapping="Wrap" Text="Select your electives below ''Select alternative major'' above " VerticalAlignment="Top"/>
+                    <Button x:Name="BtnNextSummary" Content="Next" HorizontalAlignment="Stretch" Height="44" Margin="778,290,622,0" VerticalAlignment="Top" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnNextEnrolment_Click" Foreground="White" Grid.Row="1" RenderTransformOrigin="2.056,-1.091"/>
+                    <Button x:Name="BtnBackMajor" Content="Back" HorizontalAlignment="Left" Height="44" Margin="621,290,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" Background="Blue" BorderBrush="Black" Click="BtnReMajor_Click" Foreground="White" Grid.Row="1" RenderTransformOrigin="2.056,-1.091"/>
+                    <Button x:Name="BtnSelectPrevYear" Content="SELECT FROM PREVIOUS YEAR" HorizontalAlignment="Stretch" Height="44" Margin="621,365,622,0" VerticalAlignment="Top" FontWeight="Bold" Background="Orange" BorderBrush="Black" Click="BtnSelectPreviousYear_Click" Foreground="White" Grid.Row="1" RenderTransformOrigin="2.056,-1.091"/>
+
+                    <!-- Semester One COMBO BOXES, THESE NEED TO BE LINKED however margins are exact between the four -->
+
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,241,0,0" VerticalAlignment="Top" Width="432"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,10,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,96,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,182,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
+
+                    <!-- Semester Two COMBO BOXES, THESE NEED TO BE LINKED however margins are exact between the four -->
+
+                    <ComboBox HorizontalAlignment="Stretch" Height="66" Margin="900,241,171,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="900,10,0,0" VerticalAlignment="Top" Width="429" Grid.Row="1"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="900,96,0,0" VerticalAlignment="Top" Width="429" Grid.Row="1"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="900,182,0,0" VerticalAlignment="Top" Width="429" Grid.Row="1"/>
+
+
+                </Grid>
+            </PivotItem>
+
             <PivotItem Margin="0" Header="Enrolment">
                 <Grid Background="White">
                     <Button

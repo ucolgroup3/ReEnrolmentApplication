@@ -208,6 +208,37 @@ namespace ReErolmentApplicaton
             ChkT101.IsChecked = false;
             ChkT111.IsChecked = false;
         }
+
+            private void BtnSelectPreviousYear_Click(object sender, RoutedEventArgs e)
+        {
+            //Button call with an if statement to move the pivot accros to the next page or pivot point
+            if (rootPivot.SelectedIndex < rootPivot.Items.Count - 1)
+            {
+                // If not at the last item, go to the next one.
+                rootPivot.SelectedIndex -= 2;
+            }
+            else
+            {
+                // The last PivotItem is selected, so loop around to the first item.
+                rootPivot.SelectedIndex = 0;
+            }
+        }
+
+        private void BtnReMajor_Click(object sender, RoutedEventArgs e)
+        {
+            //Button call with an if statement to move the pivot accros to the next page or pivot point
+            if (rootPivot.SelectedIndex < rootPivot.Items.Count - 1)
+            {
+                // If not at the last item, go to the next one.
+                rootPivot.SelectedIndex -= 1;
+            }
+            else
+            {
+                // The last PivotItem is selected, so loop around to the first item.
+                rootPivot.SelectedIndex = 0;
+            }
+        }
+
         private void BtnNextMajor_Click(object sender, RoutedEventArgs e)
         {
             //Button call with an if statement to move the pivot accros to the next page or pivot point
