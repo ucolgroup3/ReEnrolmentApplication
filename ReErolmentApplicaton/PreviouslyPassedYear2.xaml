@@ -176,10 +176,10 @@
 
                     <!-- Semester One COMBO BOXES, THESE NEED TO BE LINKED however margins are exact between the four -->
 
-                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,241,0,0" VerticalAlignment="Top" Width="432"/>
-                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,10,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
-                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,96,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
-                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,182,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,241,0,0" VerticalAlignment="Top" Width="432" ItemsSource="{Binding}" Name="Year2"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,10,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1" ItemsSource="{Binding}"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,96,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1" ItemsSource="{Binding}"/>
+                    <ComboBox HorizontalAlignment="Left" Height="66" Margin="173,182,0,0" VerticalAlignment="Top" Width="432" Grid.Row="1" ItemsSource="{Binding}"/>
 
                     <!-- Semester Two COMBO BOXES, THESE NEED TO BE LINKED however margins are exact between the four -->
 
