@@ -13,12 +13,12 @@
                 Background="White"
                 IsReadOnly="true"
                 Text="Prequsites" />
-            <TextBox IsReadOnly="true" Text="T101 - Networking Funtalmentals " />
+            <TextBox IsReadOnly="true" Text="T101 - Networking Fundalmentals " />
             <TextBox
                 Background="White"
                 IsReadOnly="true"
                 Text="Major Electives" />
-            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Fundalmentals" />
             <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
             <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
         </StackPanel>
@@ -31,12 +31,12 @@
                 Background="White"
                 IsReadOnly="true"
                 Text="Prequsites" />
-            <TextBox IsReadOnly="true" Text="T101 - Networking Funtalmentals " />
+            <TextBox IsReadOnly="true" Text="T101 - Networking Fundalmentals " />
             <TextBox
                 Background="White"
                 IsReadOnly="true"
                 Text="Major Electives" />
-            <TextBox IsReadOnly="true" Text="T201 - Networking Funtalmentals" />
+            <TextBox IsReadOnly="true" Text="T201 - Networking Fundalmentals" />
             <TextBox IsReadOnly="true" Text="T206 - CISCO RSE (Networks)" />
             <TextBox IsReadOnly="true" Text="T211 - Systems Security" />
         </StackPanel>

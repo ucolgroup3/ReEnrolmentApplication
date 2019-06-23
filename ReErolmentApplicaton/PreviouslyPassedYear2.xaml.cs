@@ -16,6 +16,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Popups;
+//Please ignore the following, I'm trying to connect to the database and Google syas I need these.
+//Will try again later but out of fiddle time now
+//using System.Data;
+//using System.Data.SqlClient;
+//using System.Data.SqlClient.dll;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ReErolmentApplicaton
@@ -30,6 +35,8 @@ namespace ReErolmentApplicaton
         public PreviouslyPassedYear2()
         {
             this.InitializeComponent();
+            //Call binding method for the year2 combobox STILL TESTING!!!
+            BindComboBox(Year2);
         }
         // If next button is clicked this runs and goes through if statements to make sure Textboxs are not null.
         private void BtnNextPreviouslyPassedPapers_Click(object sender, RoutedEventArgs e)
@@ -360,6 +367,13 @@ namespace ReErolmentApplicaton
             };
             //Displays The Dialog box above
             ContentDialogResult result = await NoSelectedRadioDialog.ShowAsync();
+        }
+        //Method to bind database data to combobox STILL TESTING!!!!
+        public void BindComboBox(ComboBox Year2)
+        {
+            //commented out so you guys don't get an error when you do your thing, still trying to make it work
+            //https://www.c-sharpcorner.com/uploadfile/syedshakeer/bind-combobox-in-wpf/
+            //SqlConnection conn = new SqlConnection("your connection string");
         }
     }
 }
